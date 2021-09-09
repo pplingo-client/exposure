@@ -31,8 +31,7 @@ class RenderExposureDetector extends RenderProxyBox {
   /// See [RenderObject.paint].
   @override
   void paint(PaintingContext context, Offset offset) {
-    if (_onExposure == null ||
-        ExposureDetectorController.instance.filterKeysContains(key)) {
+    if (_onExposure == null ) {
       // 不在需要创建ExposureDetectorLayer
       ExposureDetectorLayer.forget(key);
       super.paint(context, offset);
